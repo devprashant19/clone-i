@@ -1,6 +1,6 @@
 import { cn } from "../../lib/utils";
 import { AnimatePresence, motion } from "motion/react";
-
+import {BackgroundGradient} from "./BackgroundGradient"
 import { useState } from "react";
 
 export const HoverEffect = ({
@@ -15,7 +15,7 @@ export const HoverEffect = ({
       {items.map((item, idx) => (
         <a
           href={item?.link}
-          key={item?.title}
+          key={item?.id}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}>
@@ -35,12 +35,14 @@ export const HoverEffect = ({
                 }} />
             )}
           </AnimatePresence>
+          <BackgroundGradient>
           <Card className="bg-zinc-900">
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
             <br />
              <span className="status-chip">{item.status}</span>
           </Card>
+          </BackgroundGradient>
         </a>
       ))}
     </div>

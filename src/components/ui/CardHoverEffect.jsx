@@ -1,6 +1,5 @@
 import { cn } from "../../lib/utils";
 import { AnimatePresence, motion } from "motion/react";
-import {BackgroundGradient} from "./BackgroundGradient"
 import { useState } from "react";
 
 export const HoverEffect = ({
@@ -8,7 +7,6 @@ export const HoverEffect = ({
   className
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
-  console.log(items)
   return (
     <div
       className={cn("grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10", className)}>
@@ -35,14 +33,12 @@ export const HoverEffect = ({
                 }} />
             )}
           </AnimatePresence>
-          <BackgroundGradient>
-          <Card className="bg-zinc-900">
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
-            <br />
-             <span className="status-chip">{item.status}</span>
-          </Card>
-          </BackgroundGradient>
+            <Card className="bg-zinc-900">
+              <CardTitle>{item.title}</CardTitle>
+              <CardDescription>{item.description}</CardDescription>
+              <br />
+              <span className="status-chip">{item.status}</span>
+            </Card>
         </a>
       ))}
     </div>

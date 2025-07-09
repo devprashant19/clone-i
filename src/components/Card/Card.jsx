@@ -3,7 +3,7 @@ import { HoverEffect } from "../ui/CardHoverEffect";
 
 export function Card() {
     return (
-        <div className="max-w-screen mx-auto px-8 bg-black w-screen">
+        <div className="max-w-screen mx-auto px-8 bg-transparent w-screen">
             <HoverEffect items={projects}/>
         </div>
     );

@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 @import "tailwindcss";
+
+.roboto-slab-text {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
